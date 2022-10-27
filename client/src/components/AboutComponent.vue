@@ -29,13 +29,20 @@ onMounted(() => {
             <img src="../assets/hero.webp" alt="About image" />
           </div>
           <div class="about-text">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo consectetur, quas qui quaerat optio quo vitae quod? Quos possimus tempore facilis repellat amet corporis libero perspiciatis nisi dolor ducimus veniam sunt reiciendis unde a vero, eos nobis atque modi quod corrupti quasi pariatur! Blanditiis adipisci veritatis dignissimos dolorem ipsam in.</p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Explicabo consectetur, quas qui quaerat optio quo vitae quod? Quos
+              possimus tempore facilis repellat amet corporis libero
+              perspiciatis nisi dolor ducimus veniam sunt reiciendis unde a
+              vero, eos nobis atque modi quod corrupti quasi pariatur!
+              Blanditiis adipisci veritatis dignissimos dolorem ipsam in.
+            </p>
           </div>
         </div>
+        <transition name="fade" appear>
+          <div class="bottom-text"><p>partnership</p></div>
+        </transition>
       </div>
-    </transition>
-    <transition name="fade" appear>
-      <div class="bottom-text"><p>partnership</p></div>
     </transition>
   </div>
 </template>
