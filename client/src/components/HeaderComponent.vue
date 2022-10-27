@@ -1,11 +1,32 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 const showMobileMenu = ref(false);
-const selectedCursor = ref(`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='progress-ring' width='120' height='120'%3E%3Ccircle class='progress-ring__circle' stroke='white' stroke-width='4' fill='%23fff' r='52' cx='60' cy='60'/%3E%3C/svg%3E"), pointer`)
+
+const runMouseOver = () => {
+  document.querySelector("#mouse-cursor").style.transform = "scale(4)";
+  document.querySelector("#mouse-cursor").style.background = "#fff";
+};
+const runMouseLeave = () => {
+  document.querySelector("#mouse-cursor").style.transform = "";
+  document.querySelector("#mouse-cursor").style.background = "";
+};
+
+onMounted(async () => {
+  const handleMousePos = (e) => {
+    const cursor = document.querySelector("#mouse-cursor");
+    const { pageX: posX, pageY: posY } = e;
+    return (
+      (cursor.style.left = `${posX - 10}px`),
+      (cursor.style.top = `${posY - 10}px`)
+    );
+  };
+  document.addEventListener("mousemove", handleMousePos);
+});
 </script>
 
 <template>
   <main>
+    <div id="mouse-cursor"></div>
     <header class="header" id="header">
       <nav class="navbar header-container">
         <a href="/" class="brand" aria-label="Logo">
@@ -35,7 +56,8 @@ const selectedCursor = ref(`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.
             class-active="is-active"
             to="/"
             exact
-            :style="{cursor: selectedCursor}"
+            @mouseenter="runMouseOver"
+            @mouseleave="runMouseLeave"
           >
             <span class="menu-name">Home</span>
           </router-link>
@@ -44,7 +66,8 @@ const selectedCursor = ref(`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.
             class-active="is-active"
             to="/#about-us"
             exact
-            :style="{cursor: selectedCursor}"
+            @mouseenter="runMouseOver"
+            @mouseleave="runMouseLeave"
           >
             <span class="menu-name">About</span>
           </router-link>
@@ -53,7 +76,8 @@ const selectedCursor = ref(`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.
             class-active="is-active"
             to="/#services"
             exact
-            :style="{cursor: selectedCursor}"
+            @mouseenter="runMouseOver"
+            @mouseleave="runMouseLeave"
           >
             <span class="menu-name">Services</span>
           </router-link>
@@ -62,7 +86,8 @@ const selectedCursor = ref(`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.
             class-active="is-active"
             to="/#contact"
             exact
-            :style="{cursor: selectedCursor}"
+            @mouseenter="runMouseOver"
+            @mouseleave="runMouseLeave"
           >
             <span class="menu-name">Contact</span>
           </router-link>
@@ -73,6 +98,18 @@ const selectedCursor = ref(`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.
 </template>
 
 <style scoped>
+#mouse-cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--color-black);
+  border: 4px solid var(--color-white);
+  border-radius: 999px;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 999;
+  transition: top 0.025s ease, left 0.025s ease, transform 0.25s ease;
+}
 .header-container {
   height: auto;
   margin: 0 auto;
@@ -176,8 +213,6 @@ const selectedCursor = ref(`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.
 .menu-name:hover {
   transform: scale(1.1);
   letter-spacing: 1.1rem;
-  color: var(--color-black);
-  -webkit-text-stroke: 2px var(--color-white);
 }
 .menu-title {
   width: 30%;
