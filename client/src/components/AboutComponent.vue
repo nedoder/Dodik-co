@@ -98,10 +98,22 @@ onMounted(() => {
   width: 100%;
   height: auto;
 }
+
+.about-image::before {
+  position: absolute;
+  top: -10%;
+  left: 10%;
+  width: 100%;
+  height: 100%;
+  border: 4px solid var(--color-blue);
+  content: "";
+}
 .about-text p {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   color: var(--color-white);
+  text-align: justify;
+  padding: 0 7rem;
 }
 .animated-component.fade-enter-from,
 .animated-component.zoom-enter-from {

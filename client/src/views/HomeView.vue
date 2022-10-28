@@ -3,6 +3,7 @@ import HeaderComponent from "../components/HeaderComponent.vue";
 import AboutComponent from "../components/AboutComponent.vue";
 import ServicesComponent from "../components/ServicesComponent.vue";
 import ContactComponent from "../components/ContactComponent.vue";
+import FooterComponent from "../components/FooterComponent.vue";
 import { ref } from "vue";
 const test = ref(null);
 function runOnScroll() {
@@ -38,6 +39,7 @@ window.addEventListener("scroll", () => {
     <AboutComponent />
     <ServicesComponent />
     <ContactComponent />
+    <FooterComponent />
   </main>
 </template>
 

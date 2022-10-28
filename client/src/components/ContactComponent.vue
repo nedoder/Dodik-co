@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from "vue";
+import ContactForm from "./ContactForm.vue";
 
 const contact = ref();
 const animated = ref(false);
@@ -24,16 +25,13 @@ onMounted(() => {
         <p>Let&#39;s stay in touch</p>
       </div>
     </transition>
+    <contact-form />
   </div>
 </template>
 
 <style scoped>
-#contact {
-  height: 100vh;
-}
 
 #contact p {
-  position: absolute;
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 2px var(--color-white);
   text-transform: uppercase;
