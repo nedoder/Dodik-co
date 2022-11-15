@@ -79,4 +79,10 @@ textarea {
   cursor: pointer;
   letter-spacing: 0.5rem;
 }
+
+@media (max-width: 992px) {
+  .contact {
+    width: 80%;
+  }
+}
 </style>

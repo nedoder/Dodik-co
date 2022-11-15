@@ -1,7 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
+  mode: "history",
   history: createWebHistory(import.meta.env.BASE_URL),
+  linkExactActiveClass: "exact-active",
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    }
+    return window.scrollTo(0, 0); // Go to the top of the page if no hash
+  },
   routes: [
     {
       path: "/",
