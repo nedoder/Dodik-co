@@ -2,13 +2,12 @@
 import HeaderComponent from "../components/HeaderComponent.vue";
 import AboutComponent from "../components/AboutComponent.vue";
 import ServicesComponent from "../components/ServicesComponent.vue";
-import ContactComponent from "../components/ContactComponent.vue";
+// import ContactComponent from "../components/ContactComponent.vue";
 import FooterComponent from "../components/FooterComponent.vue";
 import { ref } from "vue";
 const test = ref(null);
 function runOnScroll() {
   const position = -Math.round(window.pageYOffset) / 5 + "%";
-  console.log(position);
   test.value.style.transform = "translateX(" + position + ")";
   test.value.style.transition = "transform 100ms linear";
 }
@@ -38,7 +37,7 @@ window.addEventListener("scroll", () => {
     </transition>
     <AboutComponent />
     <ServicesComponent />
-    <ContactComponent />
+    <!-- <ContactComponent /> -->
     <FooterComponent />
   </main>
 </template>
@@ -124,5 +123,122 @@ span:last-child {
 .show-enter-from,
 .show-leave-to {
   opacity: 0;
+}
+
+@media (max-width: 1400px) {
+  h1 span {
+    font-size: 15rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  h1 span {
+    font-size: 14rem;
+  }
+
+  span:last-child {
+    font-size: 4.5rem;
+  }
+
+  .bottom-text p {
+    font-size: 6.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 span {
+    font-size: 11rem;
+  }
+
+  span:last-child {
+    font-size: 4rem;
+  }
+
+  .bottom-text p {
+    font-size: 5rem;
+    bottom: -4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    width: 100%;
+  }
+  h1 span {
+    font-size: 10rem;
+  }
+
+  span:last-child {
+    font-size: 3.5rem;
+  }
+
+  .bottom-text p {
+    font-size: 4.5rem;
+    bottom: -3rem;
+    right: -7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 span {
+    font-size: 8rem;
+  }
+
+  span:last-child {
+    font-size: 3rem;
+  }
+
+  .bottom-text p {
+    font-size: 3.5rem;
+    bottom: -3rem;
+    right: -7rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 span {
+    font-size: 7rem;
+  }
+
+  span:last-child {
+    font-size: 2.5rem;
+  }
+
+  .bottom-text p {
+    font-size: 3rem;
+    bottom: -3rem;
+    right: -7rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 span {
+    font-size: 6rem;
+  }
+  span:last-child {
+    font-size: 2rem;
+  }
+  .bottom-text p {
+    font-size: 2.5rem;
+    bottom: -2rem;
+    right: -7rem;
+    letter-spacing: 0.2rem;
+  }
+}
+@media (max-width: 350px) {
+  h1 span {
+    font-size: 4.5rem;
+  }
+  span:last-child {
+    font-size: 1rem;
+  }
+  .bottom-text p {
+    font-size: 1.5rem;
+    bottom: -1rem;
+    right: -7rem;
+    letter-spacing: 0.2rem;
+  }
 }
 </style>

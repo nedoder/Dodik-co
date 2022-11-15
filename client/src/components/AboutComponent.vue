@@ -19,7 +19,7 @@ onMounted(() => {
 
 <template>
   <div id="about-us" ref="target">
-    <transition name="zoom">
+    <transition name="zoom" mode="out-in">
       <div v-if="animate" class="animated-component">
         <div class="about-title">
           <h1>About us</h1>
@@ -39,9 +39,9 @@ onMounted(() => {
             </p>
           </div>
         </div>
-        <transition name="fade" appear>
-          <div class="bottom-text"><p>partnership</p></div>
-        </transition>
+        <!-- <transition name="fade" appear> -->
+        <div class="bottom-text"><p>partnership</p></div>
+        <!-- </transition> -->
       </div>
     </transition>
   </div>
@@ -50,6 +50,7 @@ onMounted(() => {
 <style scoped>
 #about-us {
   height: 100vh;
+  width: 100%;
 }
 
 .about-title {
@@ -136,5 +137,56 @@ onMounted(() => {
 .zoom-enter-from,
 .zoom-leave-to {
   transform: scale(0.9);
+}
+
+@media (max-width: 992px) {
+  .about-main {
+    flex-direction: column;
+  }
+
+  .about-image,
+  .about-text {
+    width: 80%;
+  }
+
+  .about-text p {
+    padding: 1rem;
+  }
+
+  .bottom-text p {
+    font-size: 5rem;
+    bottom: -5rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-title h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .bottom-text p {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-title h1 {
+    font-size: 4rem;
+  }
+
+  .bottom-text p {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .about-title h1 {
+    font-size: 3rem;
+  }
+
+  .bottom-text p {
+    font-size: 2rem;
+  }
 }
 </style>

@@ -45,7 +45,7 @@ onMounted(async () => {
         </div>
       </nav>
     </header>
-    <transition name="enter">
+    <transition name="enter" mode="out-in">
       <div class="menu-wrapper" v-if="showMobileMenu">
         <div class="menu-title">
           <p>dodik co</p>
@@ -59,7 +59,9 @@ onMounted(async () => {
             @mouseenter="runMouseOver"
             @mouseleave="runMouseLeave"
           >
-            <span class="menu-name">Home</span>
+            <span class="menu-name" @click="showMobileMenu = !showMobileMenu">
+              Home
+            </span>
           </router-link>
           <router-link
             class="menu-link"
@@ -69,7 +71,9 @@ onMounted(async () => {
             @mouseenter="runMouseOver"
             @mouseleave="runMouseLeave"
           >
-            <span class="menu-name">About</span>
+            <span class="menu-name" @click="showMobileMenu = !showMobileMenu">
+              About
+            </span>
           </router-link>
           <router-link
             class="menu-link"
@@ -79,7 +83,9 @@ onMounted(async () => {
             @mouseenter="runMouseOver"
             @mouseleave="runMouseLeave"
           >
-            <span class="menu-name">Services</span>
+            <span class="menu-name" @click="showMobileMenu = !showMobileMenu">
+              Services
+            </span>
           </router-link>
           <router-link
             class="menu-link"
@@ -89,7 +95,9 @@ onMounted(async () => {
             @mouseenter="runMouseOver"
             @mouseleave="runMouseLeave"
           >
-            <span class="menu-name">Contact</span>
+            <span class="menu-name" @click="showMobileMenu = !showMobileMenu">
+              Contact
+            </span>
           </router-link>
         </div>
       </div>
@@ -115,7 +123,8 @@ onMounted(async () => {
   margin: 0 auto;
 }
 .brand img {
-  height: 4rem;
+  height: 8rem;
+  padding: 1rem;
 }
 .header {
   position: fixed;
@@ -245,5 +254,36 @@ onMounted(async () => {
 .enter-leave-to {
   right: -100%;
   opacity: 0.5;
+}
+
+@media (max-width: 992px) {
+  .menu-title p {
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-title p {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-title p {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu-title {
+    display: none;
+  }
+  .menu-list {
+    width: 100%;
+  }
+
+  .menu-name {
+    font-size: 3.5rem;
+  }
 }
 </style>
