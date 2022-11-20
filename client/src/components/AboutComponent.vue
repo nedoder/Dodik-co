@@ -50,7 +50,7 @@ onMounted(() => {
 <style scoped>
 #about-us {
   height: 100vh;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   background: var(--color-black);
 }

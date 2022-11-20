@@ -3,10 +3,10 @@ import { onMounted, ref } from "vue";
 import ContactComponent from "./ContactComponent.vue";
 
 const footer = ref();
-const animations = ref(false);
+const animations2 = ref(false);
 const observer = new IntersectionObserver(
   ([entry]) => {
-    animations.value = entry.isIntersecting;
+    animations2.value = entry.isIntersecting;
   },
   {
     threshold: 0.5,
@@ -20,9 +20,9 @@ onMounted(() => {
 
 <template>
   <footer class="footer" id="contact" ref="footer">
-    <transition name="fade" mode="out-in">
-      <div v-if="animations" class="footer-wrapper">
-        <ContactComponent />
+    <ContactComponent />
+    <transition name="zoom4" mode="out-in">
+      <div class="footer-wrapper" v-if="animations2">
         <div class="footer-container">
           <div class="footer-brand">
             <a href="/" class="brand-image" aria-label="Logo"
@@ -122,7 +122,6 @@ onMounted(() => {
     </transition>
   </footer>
 </template>
-
 <style scoped>
 .footer {
   width: 100%;
@@ -210,50 +209,25 @@ onMounted(() => {
   color: var(--color-blue);
 }
 
-.footer-wrapper.fade-enter-from {
+.zoom4-enter-from {
   transition: none;
 }
 
-/* Fade animation */
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 1s ease;
+.zoom4-enter-active,
+.zoom4-leave-active {
+  transition: all 0.5s ease;
+  transition-delay: 0.1s;
 }
-.fade-enter-from,
-.fade-leave-to {
+
+.zoom4-enter-from,
+.zoom4-leave-to {
   opacity: 0;
 }
-/* @media (max-width: 820px) {
-  .footer {
-    padding: 3rem calc(5% + 1rem);
-  }
-} */
-/* @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer-brand,
-  .social-icons,
-  .partner-logo,
-  .quick-links,
-  .footer-contact,
-  .footer-container {
-    width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-  .copyrights {
-    text-align: center;
-  }
-  .partner-logo img {
-    margin: 0 auto;
-  }
-} */
 
 @media (max-width: 768px) {
   .footer-wrapper {
     flex-direction: column;
+    padding: 4rem 0;
   }
 
   .footer-container,

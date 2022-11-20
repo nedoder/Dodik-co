@@ -27,14 +27,14 @@ onMounted(() => {
 
 <template>
   <div id="services" ref="target2">
-    <transition name="zoom2" mode="out-in">
-      <div v-if="animate2" class="animated">
-        <div class="services-title">
-          <h1>Our services</h1>
-        </div>
-        <div class="row">
-          <div class="column one">
-            <div class="animation-container">
+    <div class="animated">
+      <div class="services-title">
+        <h1>Our services</h1>
+      </div>
+      <div class="row">
+        <div class="column one">
+          <transition name="zoom2" mode="out-in">
+            <div class="animation-container" v-if="animate2">
               <svg
                 id="Layer_2"
                 data-name="Layer 2"
@@ -337,92 +337,56 @@ onMounted(() => {
                 />
               </svg>
             </div>
-          </div>
-          <swiper
-            :direction="'vertical'"
-            :effect="'fade'"
-            :loop="true"
-            :pagination="{
-              clickable: true,
-            }"
-            :autoplay="{
-              delay: 2500,
-              disableOnInteraction: false,
-            }"
-            class="column two"
-          >
-            <swiper-slide class="card-one">
-              <h3>Logistics</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Doloribus praesentium placeat expedita exercitationem excepturi
-                obcaecati aliquid recusandae debitis rem. At aperiam quos
-                aliquam error laudantium totam optio maiores, harum rem minus,
-                aspernatur illo autem maxime incidunt recusandae qui soluta
-                consectetur. Corrupti eaque nemo voluptate facere dicta commodi,
-                voluptatibus autem eos pariatur maxime vero. Ipsam
-                exercitationem, iste porro id, dolores enim nostrum, assumenda
-                minus odio cum nulla ad beatae reiciendis commodi quo ea aperiam
-                vel quisquam minima. Sit nam placeat facere, at nisi fugit
-                itaque laborum, nesciunt soluta provident cum mollitia quis qui
-                quas ipsum illum, temporibus quisquam explicabo!
-              </p>
-            </swiper-slide>
-            <swiper-slide class="card-two">
-              <h3>Transport</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Doloribus praesentium placeat expedita exercitationem excepturi
-                obcaecati aliquid recusandae debitis rem. At aperiam quos
-                aliquam error laudantium totam optio maiores, harum rem minus,
-                aspernatur illo autem maxime incidunt recusandae qui soluta
-                consectetur. Corrupti eaque nemo voluptate facere dicta commodi,
-                voluptatibus autem eos pariatur maxime vero. Ipsam
-                exercitationem, iste porro id, dolores enim nostrum, assumenda
-                minus odio cum nulla ad beatae reiciendis commodi quo ea aperiam
-                vel quisquam minima. Sit nam placeat facere, at nisi fugit
-                itaque laborum, nesciunt soluta provident cum mollitia quis qui
-                quas ipsum illum, temporibus quisquam explicabo!
-              </p>
-            </swiper-slide>
-            <swiper-slide class="card-three">
-              <h3>Trucking</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Doloribus praesentium placeat expedita exercitationem excepturi
-                obcaecati aliquid recusandae debitis rem. At aperiam quos
-                aliquam error laudantium totam optio maiores, harum rem minus,
-                aspernatur illo autem maxime incidunt recusandae qui soluta
-                consectetur. Corrupti eaque nemo voluptate facere dicta commodi,
-                voluptatibus autem eos pariatur maxime vero. Ipsam
-                exercitationem, iste porro id, dolores enim nostrum, assumenda
-                minus odio cum nulla ad beatae reiciendis commodi quo ea aperiam
-                vel quisquam minima. Sit nam placeat facere, at nisi fugit
-                itaque laborum, nesciunt soluta provident cum mollitia quis qui
-                quas ipsum illum, temporibus quisquam explicabo!
-              </p>
-            </swiper-slide>
-            <swiper-slide class="card-four">
-              <h3>Something</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Doloribus praesentium placeat expedita exercitationem excepturi
-                obcaecati aliquid recusandae debitis rem. At aperiam quos
-                aliquam error laudantium totam optio maiores, harum rem minus,
-                aspernatur illo autem maxime incidunt recusandae qui soluta
-                consectetur. Corrupti eaque nemo voluptate facere dicta commodi,
-                voluptatibus autem eos pariatur maxime vero. Ipsam
-                exercitationem, iste porro id, dolores enim nostrum, assumenda
-                minus odio cum nulla ad beatae reiciendis commodi quo ea aperiam
-                vel quisquam minima. Sit nam placeat facere, at nisi fugit
-                itaque laborum, nesciunt soluta provident cum mollitia quis qui
-                quas ipsum illum, temporibus quisquam explicabo!
-              </p>
-            </swiper-slide>
-          </swiper>
+          </transition>
         </div>
+        <swiper
+          :direction="'vertical'"
+          :effect="'fade'"
+          :loop="true"
+          :pagination="{
+            clickable: true,
+          }"
+          :autoplay="{
+            delay: 2500,
+            disableOnInteraction: false,
+          }"
+          class="column two"
+        >
+          <swiper-slide class="card-one">
+            <h3>Logistics</h3>
+            <p>
+              Dodik co provides transportation solutions that align with your
+              supply chain goals and needs, whether it is a spot shipment, next
+              day, project-based or contracted freight.
+            </p>
+          </swiper-slide>
+          <swiper-slide class="card-two">
+            <h3>Transport</h3>
+            <p>
+              Dodik co provides transportation solutions that align with your
+              supply chain goals and needs, whether it is a spot shipment, next
+              day, project-based or contracted freight.
+            </p>
+          </swiper-slide>
+          <swiper-slide class="card-three">
+            <h3>Trucking</h3>
+            <p>
+              Dodik co provides transportation solutions that align with your
+              supply chain goals and needs, whether it is a spot shipment, next
+              day, project-based or contracted freight.
+            </p>
+          </swiper-slide>
+          <swiper-slide class="card-four">
+            <h3>Something</h3>
+            <p>
+              Dodik co provides transportation solutions that align with your
+              supply chain goals and needs, whether it is a spot shipment, next
+              day, project-based or contracted freight.
+            </p>
+          </swiper-slide>
+        </swiper>
       </div>
-    </transition>
+    </div>
   </div>
 </template>
 
@@ -435,7 +399,6 @@ onMounted(() => {
 
 .animated {
   height: 100vh;
-  position: sticky;
   top: 0;
 }
 .row {
@@ -445,7 +408,7 @@ onMounted(() => {
 }
 
 .column {
-  flex: 50%;
+  width: 50%;
   padding: 16px;
 }
 
@@ -457,11 +420,12 @@ onMounted(() => {
 .swiper {
   height: 77vh;
 }
+
 .two {
   background-color: var(--color-blue);
   color: var(--color-white);
   text-align: center;
-  padding: 3rem;
+  padding: 1rem 3rem;
 }
 
 .two h3 {
@@ -489,6 +453,7 @@ onMounted(() => {
   stroke-miterlimit: 10;
   fill-rule: evenodd;
   fill-opacity: 0;
+  fill: transparent;
 }
 
 svg {
@@ -577,7 +542,23 @@ svg polygon {
     align-items: stretch;
   }
   .column {
-    flex: 100%;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .one {
+    position: absolute;
+    z-index: 10;
+    top: 25%;
+    margin: 1rem;
+  }
+
+  .map-outline {
+    opacity: 0.2;
+  }
+
+  .swiper {
+    height: 60vh;
   }
 }
 
