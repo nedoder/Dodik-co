@@ -286,4 +286,10 @@ onMounted(async () => {
     font-size: 3.5rem;
   }
 }
+
+@media (hover: none) {
+  #mouse-cursor {
+    display: none;
+  }
+}
 </style>
