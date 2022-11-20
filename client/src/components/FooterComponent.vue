@@ -227,7 +227,6 @@ onMounted(() => {
 @media (max-width: 768px) {
   .footer-wrapper {
     flex-direction: column;
-    padding: 4rem 0;
   }
 
   .footer-container,

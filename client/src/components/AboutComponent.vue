@@ -49,7 +49,7 @@ onMounted(() => {
 
 <style scoped>
 #about-us {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   margin: 0 auto;
   background: var(--color-black);
@@ -80,6 +80,7 @@ onMounted(() => {
   width: 100%;
   text-align: left;
   letter-spacing: 0.5rem;
+  z-index: 1;
 }
 
 .about-main {
