@@ -19,16 +19,16 @@ onMounted(() => {
 
 <template>
   <div id="about-us" ref="target">
-    <transition name="zoom" mode="out-in">
-      <div v-if="animate" class="animated-component">
-        <div class="about-title">
-          <h1>About us</h1>
+    <div class="animated-component">
+      <div class="about-title">
+        <h1>About us</h1>
+      </div>
+      <div class="about-main">
+        <div class="about-image">
+          <img src="../assets/hero.webp" alt="About image" />
         </div>
-        <div class="about-main">
-          <div class="about-image">
-            <img src="../assets/hero.webp" alt="About image" />
-          </div>
-          <div class="about-text">
+        <transition name="zoom" mode="out-in">
+          <div class="about-text" v-if="animate">
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Explicabo consectetur, quas qui quaerat optio quo vitae quod? Quos
@@ -38,19 +38,21 @@ onMounted(() => {
               Blanditiis adipisci veritatis dignissimos dolorem ipsam in.
             </p>
           </div>
-        </div>
-        <!-- <transition name="fade" appear> -->
-        <div class="bottom-text"><p>partnership</p></div>
-        <!-- </transition> -->
+        </transition>
       </div>
-    </transition>
+      <!-- <transition name="fade" appear> -->
+      <div class="bottom-text"><p>partnership</p></div>
+      <!-- </transition> -->
+    </div>
   </div>
 </template>
 
 <style scoped>
 #about-us {
   height: 100vh;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  background: var(--color-black);
 }
 
 .about-title {
@@ -116,8 +118,8 @@ onMounted(() => {
   text-align: justify;
   padding: 0 7rem;
 }
-.animated-component.fade-enter-from,
-.animated-component.zoom-enter-from {
+.fade-enter-from,
+.zoom-enter-from {
   transition: none;
 }
 /* Fade animation */
@@ -144,9 +146,12 @@ onMounted(() => {
     flex-direction: column;
   }
 
-  .about-image,
-  .about-text {
+  .about-image {
     width: 80%;
+  }
+
+  .about-text {
+    width: 90%;
   }
 
   .about-text p {

@@ -128,9 +128,8 @@ onMounted(() => {
   width: 100%;
   min-height: 100vh;
   padding: 0 calc(5% + 1rem);
-  border-top-left-radius: 3rem;
-  border-top-right-radius: 3rem;
   overflow: hidden;
+  background: var(--color-black);
 }
 
 .brand-image img {
