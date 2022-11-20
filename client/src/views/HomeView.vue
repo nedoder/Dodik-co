@@ -6,14 +6,10 @@ import ServicesComponent from "../components/ServicesComponent.vue";
 import FooterComponent from "../components/FooterComponent.vue";
 import { ref } from "vue";
 const test = ref(null);
-function runOnScroll() {
+window.addEventListener("scroll", () => {
   const position = -Math.round(window.pageYOffset) / 5 + "%";
   test.value.style.transform = "translateX(" + position + ")";
   test.value.style.transition = "transform 100ms linear";
-}
-
-window.addEventListener("scroll", () => {
-  runOnScroll();
 });
 </script>
 
@@ -75,7 +71,7 @@ span:last-child {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 105vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
@@ -93,6 +89,7 @@ span:last-child {
 }
 .bottom-text p {
   position: absolute;
+  width: 100%;
   bottom: -6rem;
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 2px var(--color-white);
@@ -100,15 +97,14 @@ span:last-child {
   font-family: "Anton", sans-serif;
   font-size: 7rem;
   font-weight: 400;
-  width: 100%;
   text-align: right;
   letter-spacing: 0.5rem;
 }
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 2.5s ease;
-  transition-delay: 2s;
+  transition: all 1.5s ease;
+  transition-delay: 0.5s;
 }
 .fade-enter-from,
 .fade-leave-to {
@@ -118,7 +114,7 @@ span:last-child {
 
 .show-enter-active,
 .show-leave-active {
-  transition: all 2.5s ease;
+  transition: all 1.5s ease;
 }
 .show-enter-from,
 .show-leave-to {
@@ -175,7 +171,6 @@ span:last-child {
   .bottom-text p {
     font-size: 4.5rem;
     bottom: -3rem;
-    right: -7rem;
   }
 }
 
@@ -191,7 +186,6 @@ span:last-child {
   .bottom-text p {
     font-size: 3.5rem;
     bottom: -3rem;
-    right: -7rem;
     letter-spacing: 0.2rem;
   }
 }
@@ -208,7 +202,6 @@ span:last-child {
   .bottom-text p {
     font-size: 3rem;
     bottom: -3rem;
-    right: -7rem;
     letter-spacing: 0.2rem;
   }
 }
@@ -223,7 +216,6 @@ span:last-child {
   .bottom-text p {
     font-size: 2.5rem;
     bottom: -2rem;
-    right: -7rem;
     letter-spacing: 0.2rem;
   }
 }
@@ -237,7 +229,6 @@ span:last-child {
   .bottom-text p {
     font-size: 1.5rem;
     bottom: -1rem;
-    right: -7rem;
     letter-spacing: 0.2rem;
   }
 }

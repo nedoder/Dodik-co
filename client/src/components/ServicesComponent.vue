@@ -430,6 +430,7 @@ onMounted(() => {
 #services {
   width: 100%;
   height: 100vh;
+  background: var(--color-black);
 }
 
 .animated {
@@ -538,7 +539,6 @@ svg polygon {
 .services-title {
   width: 100%;
   padding: 2rem;
-  margin: 2rem auto;
 }
 
 .services-title h1 {
