@@ -41,12 +41,12 @@ window.addEventListener("scroll", () => {
 <style scoped>
 main {
   height: 100vh;
-  background: url("../assets/hero.png");
-  background-blend-mode: center;
+  background: url("../assets/hero.webp");
   background-size: cover;
+  -webkit-background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center center;
 }
 
 h1 span {
@@ -230,6 +230,12 @@ span:last-child {
     font-size: 1.5rem;
     bottom: -1rem;
     letter-spacing: 0.2rem;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  main {
+    background-attachment: scroll;
   }
 }
 </style>

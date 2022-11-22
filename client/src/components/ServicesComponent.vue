@@ -353,7 +353,7 @@ onMounted(() => {
           class="column two"
         >
           <swiper-slide class="card-one">
-            <h3>Logistics</h3>
+            <h2>Logistics</h2>
             <p>
               Dodik co provides transportation solutions that align with your
               supply chain goals and needs, whether it is a spot shipment, next
@@ -361,7 +361,7 @@ onMounted(() => {
             </p>
           </swiper-slide>
           <swiper-slide class="card-two">
-            <h3>Transport</h3>
+            <h2>Transport</h2>
             <p>
               Dodik co provides transportation solutions that align with your
               supply chain goals and needs, whether it is a spot shipment, next
@@ -369,7 +369,7 @@ onMounted(() => {
             </p>
           </swiper-slide>
           <swiper-slide class="card-three">
-            <h3>Trucking</h3>
+            <h2>Trucking</h2>
             <p>
               Dodik co provides transportation solutions that align with your
               supply chain goals and needs, whether it is a spot shipment, next
@@ -377,7 +377,7 @@ onMounted(() => {
             </p>
           </swiper-slide>
           <swiper-slide class="card-four">
-            <h3>Something</h3>
+            <h2>Something</h2>
             <p>
               Dodik co provides transportation solutions that align with your
               supply chain goals and needs, whether it is a spot shipment, next
@@ -428,7 +428,7 @@ onMounted(() => {
   padding: 1rem 3rem;
 }
 
-.two h3 {
+.two h2 {
   text-transform: uppercase;
   font-size: 4rem;
   margin: 1rem 0;
@@ -572,7 +572,7 @@ svg polygon {
   .services-title h1 {
     font-size: 4rem;
   }
-  .two h3 {
+  .two h2 {
     font-size: 3rem;
   }
 }
@@ -581,7 +581,7 @@ svg polygon {
   .services-title h1 {
     font-size: 3rem;
   }
-  .two h3 {
+  .two h2 {
     font-size: 2.5rem;
   }
 }

@@ -25,7 +25,7 @@ onMounted(() => {
       </div>
       <div class="about-main">
         <div class="about-image">
-          <img src="../assets/hero.png" alt="About image" />
+          <img src="../assets/hero.webp" alt="About image" />
         </div>
         <div class="about-text">
           <transition name="zoom" mode="out-in">
