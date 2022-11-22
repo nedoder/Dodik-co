@@ -27,18 +27,20 @@ onMounted(() => {
         <div class="about-image">
           <img src="../assets/hero.webp" alt="About image" />
         </div>
-        <transition name="zoom" mode="out-in">
-          <div class="about-text" v-if="animate">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Explicabo consectetur, quas qui quaerat optio quo vitae quod? Quos
-              possimus tempore facilis repellat amet corporis libero
-              perspiciatis nisi dolor ducimus veniam sunt reiciendis unde a
-              vero, eos nobis atque modi quod corrupti quasi pariatur!
-              Blanditiis adipisci veritatis dignissimos dolorem ipsam in.
-            </p>
-          </div>
-        </transition>
+        <div class="about-text">
+          <transition name="zoom" mode="out-in">
+            <div v-if="animate">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Explicabo consectetur, quas qui quaerat optio quo vitae quod?
+                Quos possimus tempore facilis repellat amet corporis libero
+                perspiciatis nisi dolor ducimus veniam sunt reiciendis unde a
+                vero, eos nobis atque modi quod corrupti quasi pariatur!
+                Blanditiis adipisci veritatis dignissimos dolorem ipsam in.
+              </p>
+            </div>
+          </transition>
+        </div>
       </div>
       <!-- <transition name="fade" appear> -->
       <div class="bottom-text"><p>partnership</p></div>

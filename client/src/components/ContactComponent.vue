@@ -9,7 +9,7 @@ const observer = new IntersectionObserver(
     animations.value = entry.isIntersecting;
   },
   {
-    threshold: 0.25,
+    threshold: 0.5,
   }
 );
 
@@ -32,6 +32,11 @@ onMounted(() => {
 <style scoped>
 .right {
   right: 0;
+}
+
+#contact {
+  width: 100%;
+  min-height: 100vh;
 }
 #contact p {
   color: rgba(0, 0, 0, 0);
