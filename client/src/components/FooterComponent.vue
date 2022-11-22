@@ -9,7 +9,7 @@ const observer = new IntersectionObserver(
     animations2.value = entry.isIntersecting;
   },
   {
-    threshold: 0.5,
+    threshold: 0.25,
   }
 );
 
@@ -19,10 +19,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <footer class="footer" id="contact" ref="footer">
-    <ContactComponent />
+  <footer class="footer" ref="footer">
     <transition name="zoom4" mode="out-in">
       <div class="footer-wrapper" v-if="animations2">
+        <ContactComponent />
         <div class="footer-container">
           <div class="footer-brand">
             <a href="/" class="brand-image" aria-label="Logo"
@@ -141,10 +141,7 @@ onMounted(() => {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-}
-
-#contact {
-  width: 100%;
+  right: 0;
 }
 
 .footer-container,
@@ -158,6 +155,10 @@ onMounted(() => {
   align-items: center;
   padding: 2rem 0;
   width: 33%;
+}
+
+#contact {
+  width: 100%;
 }
 .gmail svg {
   margin: 0 0.5rem 0 0;
@@ -216,12 +217,12 @@ onMounted(() => {
 .zoom4-enter-active,
 .zoom4-leave-active {
   transition: all 0.5s ease;
-  transition-delay: 0.1s;
 }
 
 .zoom4-enter-from,
 .zoom4-leave-to {
   opacity: 0;
+  right: -100%;
 }
 
 @media (max-width: 768px) {

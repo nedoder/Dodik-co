@@ -41,7 +41,7 @@ window.addEventListener("scroll", () => {
 <style scoped>
 main {
   height: 100vh;
-  background: url("../assets/hero.webp");
+  background: url("../assets/hero.png");
   background-blend-mode: center;
   background-size: cover;
   background-repeat: no-repeat;
