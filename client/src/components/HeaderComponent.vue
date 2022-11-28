@@ -66,7 +66,7 @@ onMounted(async () => {
           <router-link
             class="menu-link"
             class-active="is-active"
-            to="/#about-us"
+            to="/about"
             exact
             @mouseenter="runMouseOver"
             @mouseleave="runMouseLeave"
@@ -78,7 +78,7 @@ onMounted(async () => {
           <router-link
             class="menu-link"
             class-active="is-active"
-            to="/#services"
+            to="/services"
             exact
             @mouseenter="runMouseOver"
             @mouseleave="runMouseLeave"
@@ -119,7 +119,7 @@ onMounted(async () => {
   transition: top 0.025s ease, left 0.025s ease, transform 0.25s ease;
 }
 .header-container {
-  height: auto;
+  height: 5rem;
   margin: 0 auto;
 }
 .brand img {
@@ -248,7 +248,7 @@ onMounted(async () => {
 
 .enter-enter-active,
 .enter-leave-active {
-  transition: all 1.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .enter-enter-from,
 .enter-leave-to {
@@ -258,19 +258,23 @@ onMounted(async () => {
 
 @media (max-width: 992px) {
   .menu-title p {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 }
 
 @media (max-width: 768px) {
   .menu-title p {
-    font-size: 8rem;
+    font-size: 7rem;
   }
 }
 
 @media (max-width: 600px) {
   .menu-title p {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+
+  .menu-name {
+    font-size: 3rem;
   }
 }
 
@@ -283,7 +287,7 @@ onMounted(async () => {
   }
 
   .menu-name {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 

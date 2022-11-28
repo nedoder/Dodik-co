@@ -7,7 +7,7 @@ import FooterComponent from "../components/FooterComponent.vue";
 import { ref } from "vue";
 const test = ref(null);
 window.addEventListener("scroll", () => {
-  const position = -Math.round(window.pageYOffset) / 5 + "%";
+  const position = -Math.round(window.pageYOffset) / 10 + "px";
   test.value.style.transform = "translateX(" + position + ")";
   test.value.style.transition = "transform 100ms linear";
 });

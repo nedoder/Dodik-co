@@ -16,11 +16,11 @@ import ContactForm from "./ContactForm.vue";
   width: 100%;
 }
 #contact p {
-  color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 2px var(--color-white);
+  color: var(--color-white);
+  /* -webkit-text-stroke: 2px var(--color-white); */
   text-transform: uppercase;
   font-family: "Anton", sans-serif;
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: 400;
   width: 100%;
   text-align: center;

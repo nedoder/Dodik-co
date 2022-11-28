@@ -112,11 +112,33 @@ onMounted(() => {
           </a>
         </div>
         <div class="quick-links">
-          <!-- <p>Quick links</p> -->
-          <a href="/" aria-label="Home">Home</a>
-          <a href="/#about-us" aria-label="About us">About</a>
-          <a href="/#services" aria-label="services">Services</a>
-          <a href="/#contact" aria-label="Support">Contact</a>
+          <router-link class="menu-link" class-active="is-active" to="/" exact>
+            Home
+          </router-link>
+          <router-link
+            class="menu-link"
+            class-active="is-active"
+            to="/about"
+            exact
+          >
+            About
+          </router-link>
+          <router-link
+            class="menu-link"
+            class-active="is-active"
+            to="/services"
+            exact
+          >
+            Services
+          </router-link>
+          <router-link
+            class="menu-link"
+            class-active="is-active"
+            to="/#contact"
+            exact
+          >
+            Contact
+          </router-link>
         </div>
       </div>
     </transition>

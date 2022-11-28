@@ -26,6 +26,7 @@ onMounted(() => {
       <div class="about-main">
         <div class="about-image">
           <img src="../assets/hero.webp" alt="About image" />
+          <div class="bottom-text"><p>partnership</p></div>
         </div>
         <div class="about-text">
           <transition name="zoom" mode="out-in">
@@ -37,13 +38,22 @@ onMounted(() => {
                 perspiciatis nisi dolor ducimus veniam sunt reiciendis unde a
                 vero, eos nobis atque modi quod corrupti quasi pariatur!
                 Blanditiis adipisci veritatis dignissimos dolorem ipsam in.
+                <button class="about-button">
+                  <router-link
+                    class="about-link"
+                    class-active="is-active"
+                    to="/about"
+                    exact
+                  >
+                    Show more
+                  </router-link>
+                </button>
               </p>
             </div>
           </transition>
         </div>
       </div>
       <!-- <transition name="fade" appear> -->
-      <div class="bottom-text"><p>partnership</p></div>
       <!-- </transition> -->
     </div>
   </div>
@@ -65,7 +75,7 @@ onMounted(() => {
 
 .about-title h1 {
   color: var(--color-white);
-  font-size: 8rem;
+  font-size: 6rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -103,6 +113,24 @@ onMounted(() => {
 .about-image img {
   width: 100%;
   height: auto;
+}
+
+.about-link {
+  text-align: center;
+  color: var(--color-white);
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+  /* font-family: "Anton", sans-serif; */
+  font-size: 1.2rem;
+}
+
+.about-button {
+  display: block;
+  background: var(--color-black);
+  padding: 0.5rem;
+  margin: 2rem 0;
+  border: 1px solid var(--color-white);
 }
 
 .about-image::before {
@@ -163,38 +191,49 @@ onMounted(() => {
 
   .bottom-text p {
     font-size: 5rem;
-    bottom: -5rem;
+    bottom: -3rem;
   }
 }
 @media (max-width: 768px) {
   .about-title h1 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
 
 @media (max-width: 600px) {
-  .bottom-text p {
+  .about-title h1 {
     font-size: 4rem;
+  }
+  .bottom-text p {
+    font-size: 3rem;
+  }
+
+  .about-button {
+    margin: 2rem auto;
+  }
+
+  .about-link {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 400px) {
-  .about-title h1 {
-    font-size: 4rem;
-  }
-
-  .bottom-text p {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 300px) {
   .about-title h1 {
     font-size: 3rem;
   }
 
   .bottom-text p {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .about-title h1 {
+    font-size: 2rem;
+  }
+
+  .bottom-text p {
+    font-size: 1rem;
   }
 }
 </style>

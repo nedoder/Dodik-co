@@ -29,7 +29,7 @@ onMounted(() => {
   <div id="services" ref="target2">
     <div class="animated">
       <div class="services-title">
-        <h1>Our services</h1>
+        <h1>Services</h1>
       </div>
       <div class="row">
         <div class="column one">
@@ -340,7 +340,6 @@ onMounted(() => {
           </transition>
         </div>
         <swiper
-          :direction="'vertical'"
           :effect="'fade'"
           :loop="true"
           :pagination="{
@@ -353,35 +352,111 @@ onMounted(() => {
           class="column two"
         >
           <swiper-slide class="card-one">
-            <h2>Logistics</h2>
+            <h2>24/7 dispatch</h2>
             <p>
               Dodik co provides transportation solutions that align with your
               supply chain goals and needs, whether it is a spot shipment, next
               day, project-based or contracted freight.
+              <button class="services-button">
+                <router-link
+                  class="services-link"
+                  class-active="is-active"
+                  to="/services"
+                  exact
+                >
+                  Show more
+                </router-link>
+              </button>
             </p>
           </swiper-slide>
           <swiper-slide class="card-two">
-            <h2>Transport</h2>
+            <h2>Truckload services</h2>
             <p>
               Dodik co provides transportation solutions that align with your
               supply chain goals and needs, whether it is a spot shipment, next
               day, project-based or contracted freight.
+              <button class="services-button">
+                <router-link
+                  class="services-link"
+                  class-active="is-active"
+                  to="/services"
+                  exact
+                >
+                  Show more
+                </router-link>
+              </button>
             </p>
           </swiper-slide>
           <swiper-slide class="card-three">
-            <h2>Trucking</h2>
+            <h2>Satellite tracking</h2>
             <p>
               Dodik co provides transportation solutions that align with your
               supply chain goals and needs, whether it is a spot shipment, next
               day, project-based or contracted freight.
+              <button class="services-button">
+                <router-link
+                  class="services-link"
+                  class-active="is-active"
+                  to="/services"
+                  exact
+                >
+                  Show more
+                </router-link>
+              </button>
             </p>
           </swiper-slide>
           <swiper-slide class="card-four">
-            <h2>Something</h2>
+            <h2>Team services</h2>
             <p>
               Dodik co provides transportation solutions that align with your
               supply chain goals and needs, whether it is a spot shipment, next
               day, project-based or contracted freight.
+              <button class="services-button">
+                <router-link
+                  class="services-link"
+                  class-active="is-active"
+                  to="/services"
+                  exact
+                >
+                  Show more
+                </router-link>
+              </button>
+            </p>
+          </swiper-slide>
+          <swiper-slide class="card-five">
+            <h2>Expedited services</h2>
+            <p>
+              Dodik co provides transportation solutions that align with your
+              supply chain goals and needs, whether it is a spot shipment, next
+              day, project-based or contracted freight.
+              <button class="services-button">
+                <router-link
+                  class="services-link"
+                  class-active="is-active"
+                  to="/services"
+                  exact
+                >
+                  Show more
+                </router-link>
+              </button>
+            </p>
+          </swiper-slide>
+          <swiper-slide class="card-six">
+            <h2>Customized programs</h2>
+            <p>
+              Dodik co provides transportation solutions that align with your
+              supply chain goals and needs, whether it is a spot shipment, next
+              day, project-based or contracted freight.
+              <button class="services-button">
+                <router-link
+                  class="services-link"
+                  class-active="is-active"
+                  to="/services"
+                  exact
+                >
+                  Show more
+                </router-link>
+              </button>
             </p>
           </swiper-slide>
         </swiper>
@@ -421,6 +496,9 @@ onMounted(() => {
   height: 77vh;
 }
 
+.swiper-slide {
+  padding: 3rem;
+}
 .two {
   background-color: var(--color-blue);
   color: var(--color-white);
@@ -437,6 +515,23 @@ onMounted(() => {
 .two p {
   font-size: 1.2rem;
   text-align: left;
+}
+
+.services-link {
+  text-align: center;
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.services-button {
+  display: block;
+  background: transparent;
+  padding: 0.5rem;
+  margin: 2rem 0;
+  border: 1px solid var(--color-white);
 }
 
 .animation-container {
@@ -508,7 +603,7 @@ svg polygon {
 
 .services-title h1 {
   color: var(--color-white);
-  font-size: 8rem;
+  font-size: 6rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -548,7 +643,6 @@ svg polygon {
 
   .one {
     position: absolute;
-    z-index: 10;
     top: 25%;
     margin: 1rem;
   }
@@ -564,25 +658,59 @@ svg polygon {
 
 @media (max-width: 768px) {
   .services-title h1 {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-title h1 {
+    font-size: 4rem;
+  }
+
+  .two h2 {
+    font-size: 3rem;
+  }
+
+  .two {
+    padding: 0;
+  }
+
+  .swiper-slide {
+    padding: 1rem;
+  }
+
+  .services-button {
+    margin: 2rem auto;
+  }
+
+  .services-link {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 400px) {
   .services-title h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .two h2 {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+
+  .two p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 300px) {
   .services-title h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .two h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .services-link {
+    font-size: 1rem;
   }
 }
 </style>
