@@ -91,7 +91,6 @@ onMounted(async () => {
             class="menu-link"
             class-active="is-active"
             to="/#contact"
-            exact
             @mouseenter="runMouseOver"
             @mouseleave="runMouseLeave"
           >

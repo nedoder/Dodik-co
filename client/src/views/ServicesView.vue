@@ -101,7 +101,6 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
           type: 'fraction',
         }"
         :navigation="true"
-        :modules="modules"
         class="mySwiper"
         :breakpoints="{
           250: {
