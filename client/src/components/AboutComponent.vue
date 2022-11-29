@@ -45,7 +45,8 @@ onMounted(() => {
                     to="/about"
                     exact
                   >
-                    Show more
+                    <span>Show more</span>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12.172 12 9.343 9.172l1.414-1.415L15 12l-4.243 4.243-1.414-1.415z" fill="#ffffff" class="fill-000000"></path></svg>
                   </router-link>
                 </button>
               </p>
@@ -125,12 +126,16 @@ onMounted(() => {
   font-size: 1.2rem;
 }
 
+.about-link svg {
+  width: 2rem;
+  vertical-align: middle;
+}
 .about-button {
   display: block;
   background: var(--color-black);
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   margin: 2rem 0;
-  border: 1px solid var(--color-white);
+  /* border: 1px solid var(--color-white); */
 }
 
 .about-image::before {

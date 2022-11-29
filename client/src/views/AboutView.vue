@@ -23,18 +23,18 @@ import FooterComponent from "../components/FooterComponent.vue";
             </p>
           </div>
           <div class="right">
-            <img src="../assets/about.jpg" />
+            <img src="../assets/about.webp" />
           </div>
         </div>
       </div>
     </div>
     <div class="about-numbers">
       <div class="about-number">
-        <img src="../assets/truckicon.png" />
+        <img src="../assets/truckicon.webp" />
         <p><span>200+</span>trucks</p>
       </div>
       <div class="about-number">
-        <img src="../assets/trailer.png" />
+        <img src="../assets/trailer.webp" />
         <p><span>400+</span>trailers</p>
       </div>
     </div>
@@ -92,7 +92,7 @@ import FooterComponent from "../components/FooterComponent.vue";
   position: absolute;
   width: 100%;
   min-height: 100vh;
-  background: url("../assets/dots2.png");
+  background: url("../assets/dots.webp");
   background-size: cover;
   -webkit-background-size: cover;
   background-repeat: no-repeat;
@@ -111,12 +111,13 @@ import FooterComponent from "../components/FooterComponent.vue";
   text-align: center;
   width: 100%;
   display: block;
+  padding-bottom: 2rem;
 }
 
 .about-content {
   position: relative;
   margin: 0 auto;
-  margin-top: 6rem;
+  margin-top: 9rem;
   width: 90%;
 }
 
@@ -199,6 +200,8 @@ import FooterComponent from "../components/FooterComponent.vue";
   justify-content: center;
   align-items: baseline;
   column-gap: 5rem;
+  row-gap: 3rem;
+  padding: 4rem 0;
 }
 
 .content-item h4 {
@@ -222,6 +225,13 @@ import FooterComponent from "../components/FooterComponent.vue";
   color: var(--color-white);
   text-align: center;
   margin: 4rem 0;
+}
+
+.left h2 {
+  padding-top: 1rem;
+}
+.left h3 {
+  padding-bottom: 1rem;
 }
 @supports (-webkit-touch-callout: none) {
   main {
@@ -259,9 +269,21 @@ import FooterComponent from "../components/FooterComponent.vue";
   }
 }
 
-@media (max-width: 400px) {
-  .about-content h1,
+@media (max-width: 768px) {
   .about-contents h3 {
+    font-size: 3rem;
+  }
+  .content-item h4 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .about-numbers {
+    row-gap: 3rem;
+  }
+}
+@media (max-width: 400px) {
+  .about-content h1 {
     font-size: 3rem;
   }
 }

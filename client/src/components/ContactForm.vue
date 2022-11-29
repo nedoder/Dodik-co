@@ -45,7 +45,7 @@ const onSubmit = "";
 <style scoped>
 .contact {
   text-align: center;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   background: var(--color-black);
 }
@@ -77,12 +77,5 @@ textarea {
 
 .button:hover {
   cursor: pointer;
-  letter-spacing: 0.5rem;
-}
-
-@media (max-width: 992px) {
-  .contact {
-    width: 80%;
-  }
 }
 </style>

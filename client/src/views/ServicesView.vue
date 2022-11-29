@@ -17,10 +17,10 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
     <HeaderComponent />
     <div class="services-intro">
       <h1>Trucking company</h1>
-      <img src="../assets/7.jpg" class="services-img" />
+      <img src="../assets/services.webp" class="services-img" />
       <div class="service-flex">
         <div class="service-item">
-          <img src="../assets/Box Truck.png" />
+          <img src="../assets/truckgrey.webp" />
           <div class="item-content">
             <h2>200+ TRUCKS OWN FLEET</h2>
             <p>
@@ -29,14 +29,14 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
           </div>
         </div>
         <div class="service-item">
-          <img src="../assets/GPS.png" />
+          <img src="../assets/gps.webp" />
           <div class="item-content">
             <h2>24/7 SERVICE</h2>
             <p>Best-in-class 24/7 Dispatch & Safety Service</p>
           </div>
         </div>
         <div class="service-item">
-          <img src="../assets/Map.png" />
+          <img src="../assets/map.webp" />
           <div class="item-content">
             <h2>SMART SATELLITE TRACKING</h2>
             <p>
@@ -45,7 +45,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
           </div>
         </div>
         <div class="service-item">
-          <img src="../assets/Route.png" />
+          <img src="../assets/route.webp" />
           <div class="item-content">
             <h2>WAREHOUSING & CROSS-DOCK</h2>
             <p>State-of-the-art 130,000 square-foot facility in Chicago</p>
@@ -59,7 +59,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
     <div class="service-details">
       <h2>Our mission</h2>
       <div class="mission">
-        <img src="../assets/truck.jpg" />
+        <img src="../assets/mission.webp" />
         <div class="mission-flex">
           <div class="mission-item">
             <svg data-name="Layer 1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M166.73 40.32a146.82 146.82 0 0 1-30.5-7.5c-12-4.5-22.5-10-28-17l-.5-.5-.5-.5c-.5 0-.5-.5-1-.5s-.5-.5-1-.5-.5-.5-1-.5-.5-.5-1-.5h-6c-.5 0-.5 0-1 .5-.5 0-.5 0-1 .5-.5 0-.5.5-1 .5s-.5.5-1 .5l-.5.5-.5.5c-6 7-16.5 12.5-28 17a176.56 176.56 0 0 1-30.5 7.5 10.23 10.23 0 0 0-9 10c0 25 1.5 53 11 77.5 6.5 16.5 16.5 31.5 30.5 42.5a66.19 66.19 0 0 0 16 10c6.5 3.5 14.5 9 22 6 19-7 37.5-20.5 49-37.5a108.89 108.89 0 0 0 11-21.5c9.5-24.5 11-52.5 11-77.5.5-4.5-3.5-8.5-8.5-9.5Zm-20.5 80.5c-7.5 19.5-21 36-45.5 46-24.5-10-38-26.5-45.5-46-7-18.5-9-40-9.5-62a170.71 170.71 0 0 0 26-7c10-3.5 20.5-8.5 29-15.5 8.5 7 19 12 29 15.5 9 3.5 18.5 5.5 26 7-.5 22-2.5 43.5-9.5 62Zm-49.5-14-20-14.5c-4.5-3-10.5-2.5-14 2-3 4.5-2.5 10.5 2 14l27.5 20c5.5 4 11 1.5 15-3.5 11-13.5 22.5-27 33.5-40.5 3.5-4.5 3-10.5-1.5-14s-10.5-3-14 1.5l-28.5 35Z" fill="#ffffff" class="fill-000000"></path></svg>
@@ -122,27 +122,27 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
         }"
       >
         <swiper-slide class="services-item">
-          <img src="../assets/services5.jpg" />
+          <img src="../assets/dispatch.webp" />
           <h3>24/7 dispatch</h3>
         </swiper-slide>
         <swiper-slide class="services-item">
-          <img src="../assets/services7.jpg" />
+          <img src="../assets/truckload.webp" />
           <h3>Truckload services</h3>
         </swiper-slide>
         <swiper-slide class="services-item">
-          <img src="../assets/services3.jpg" />
+          <img src="../assets/satellite.webp" />
           <h3>Satellite tracking</h3>
         </swiper-slide>
         <swiper-slide class="services-item">
-          <img src="../assets/services4.jpg" />
+          <img src="../assets/warehouse.webp" />
           <h3>Team services</h3>
         </swiper-slide>
         <swiper-slide class="services-item">
-          <img src="../assets/services1.jpg" />
+          <img src="../assets/expedited.webp" />
           <h3>Expedited services</h3>
         </swiper-slide>
         <swiper-slide class="services-item">
-          <img src="../assets/services6.jpg" />
+          <img src="../assets/customized.webp" />
           <h3>Customized programs</h3>
         </swiper-slide>
       </swiper>
@@ -243,7 +243,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
   font-size: 6rem;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 6rem;
+  margin-top: 9rem;
 }
 
 .services-details {
@@ -275,12 +275,12 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
   width: 100%;
   min-height: 50vh;
   height: auto;
-  background: url("../assets/1.png");
+  background: url("../assets/usa.webp");
   background-size: contain;
   -webkit-background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* background-position: center center; */
+  background-position: center;
   filter: grayscale(1);
   opacity: 0.2;
 }
@@ -310,6 +310,11 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
   .services-details h2 {
     font-size: 4rem;
   }
+
+  .mission svg {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -318,7 +323,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
   }
 
   .mission-content h2 {
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important;
   }
 }
 

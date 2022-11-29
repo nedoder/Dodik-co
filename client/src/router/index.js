@@ -4,11 +4,8 @@ const router = createRouter({
   mode: "history",
   history: createWebHistory(import.meta.env.BASE_URL),
   linkExactActiveClass: "exact-active",
-  scrollBehavior(to) {
-    if (to.hash) {
-      return window.scrollTo(0, document.body.scrollHeight);
-    }
-    return window.scrollTo(0, 0);
+  scrollBehavior() {
+    return { left: 0, top: 0 }
   },
   routes: [
     {
@@ -25,6 +22,11 @@ const router = createRouter({
       path: "/services",
       name: "services",
       component: () => import("../views/ServicesView.vue"),
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: () => import("../views/ContactView.vue"),
     },
   ],
 });

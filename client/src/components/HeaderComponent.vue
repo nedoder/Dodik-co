@@ -30,7 +30,7 @@ onMounted(async () => {
     <header class="header" id="header">
       <nav class="navbar header-container">
         <a href="/" class="brand" aria-label="Logo">
-          <img src="../assets/logo.png" alt="Logo" />
+          <img src="../assets/logo.webp" alt="Logo" />
         </a>
         <div class="menu" id="menu">
           <div
@@ -90,7 +90,7 @@ onMounted(async () => {
           <router-link
             class="menu-link"
             class-active="is-active"
-            to="/#contact"
+            to="/contact"
             @mouseenter="runMouseOver"
             @mouseleave="runMouseLeave"
           >
@@ -122,8 +122,7 @@ onMounted(async () => {
   margin: 0 auto;
 }
 .brand img {
-  height: 8rem;
-  padding: 1rem;
+  height: 5rem;
 }
 .header {
   position: fixed;
