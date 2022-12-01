@@ -86,7 +86,7 @@
       <div class="footer-contact">
         <p>Main office</p>
         <a href="/join-us" aria-label="Join us">31E OGDEN AVE APT 230</a>
-        <a>LA GRANGE, IL 60525</a>
+        <a href="#">LA GRANGE, IL 60525</a>
         <a href="https://www.patreon.com/" aria-label="Patreon">
           +382 67 5555 88
         </a>
